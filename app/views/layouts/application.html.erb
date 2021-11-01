@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Instagram Clone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="clearfix">
+        <h1 class="left_elm"> 
+          Instagram Clone
+        </h1>
+        <div class="right_elm">
+          <% if logged_in? %>
+            <div class="cBtn cVert">
+              <%= link_to "Profile" %>
+            </div>
+            <div class="cBtn cVert">
+              <%= link_to "Logout" %>
+            </div>
+          <% else %>
+             <div class="cBtn">
+              <%= link_to "Connexion" %>
+            </div>
+            <div class="cBtn">
+              <%= link_to "Inscription" %>
+            </div>
+          <% end %>
+        </div>
+    </header>
+    <%= yield %>
+  </body>
+</html>
