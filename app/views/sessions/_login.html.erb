@@ -1,0 +1,21 @@
+<div id="login">
+    <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+        <%= f.label :email, class:"labelForm" %>
+        <%= f.email_field :email, class:"inputForm" %>
+        <%= f.label "Mots de passe", class:"labelForm" %>
+        <%= f.password_field :password, class:"inputForm" %>
+        <%= f.submit "Connexion", class:"bSubmit" %>
+    <% end %>
+    <div class="or">
+        <div class="cHr"> </div>
+        <h5>OU</h5>
+        <div class="cHr"></div>
+    </div>
+    <div class="connect">
+       <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" />
+        <p>Se connecter avec Facebook</p>
+    </div>
+    <p> Mot de passe oublié?</p>
+  
+    <%= link_to "Créer un nouveau compte", new_session_path, class: 'new'%>
+</div>

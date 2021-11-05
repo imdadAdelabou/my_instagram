@@ -16,6 +16,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
 }
@@ -72,4 +76,79 @@ header .right_elm {
     content: "";
     display: block;
     clear: both;
+}
+
+.cForm {
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 5px 2px 8px -1px #888;
+    margin: 90px auto;
+}
+
+.center {
+    margin: 20px 20px 30px 80px;
+}
+
+.labelForm {
+    display: block;
+    font-family: 'Poppins';
+}
+
+.inputForm {
+    margin: 0;
+    width: 256px;
+    height: 38px;
+    margin: 0 30px 20px 40px;
+}
+
+.bSubmit {
+    width: 268px;
+    height: 30px;
+    background-color: #0095F6;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin: 0 20px 20px 35px;
+    cursor: pointer;
+}
+
+.or {
+    display: flex;
+    margin: 0 40px 0 40px;
+}
+
+.cHr {
+    display: inline;
+    width: 120px;
+    height: 1px;
+    background-color: grey;
+    margin-top: 7px;
+}
+
+h5 {
+    margin: 0 5px 0 5px;
+    color: grey;
+    font-family: 'Poppins';
+}
+
+.connect {
+    display: flex;
+    margin: 20px 30px 20px 30px;
+}
+
+.connect p {
+    color: #385185;
+    font-family: 'Poppins';
+    font-weight: bold;
+    margin: 0 0 10px 10px;
+}
+
+.connect img {
+    width: 24px;
+    height: 24px;
+}
+
+#login>p {
+    color: #00376B;
+    margin: 0 100px 0 100px;
 }
