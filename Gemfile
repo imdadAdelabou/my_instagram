@@ -22,6 +22,9 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bcrypt'
 
+gem 'carrierwave'
+gem 'mini_magick'
+
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
@@ -35,6 +38,8 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'bcrypt'
   gem 'spring'
+  gem 'carrierwave'
+  gem 'mini_magick'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 

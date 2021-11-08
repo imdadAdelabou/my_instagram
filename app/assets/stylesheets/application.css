@@ -190,3 +190,79 @@ h5 {
 .leftSpace {
     margin-left: 40px;
 }
+
+.choose {
+    width: 100px;
+    height: 70px;
+    background-color: #ff56aa;
+}
+
+.sbmt {
+    margin-top: 20px;
+}
+
+.cImg img {
+    max-width: 170px;
+    height: 70px;
+}
+
+.cPost {
+    width: 600px;
+    height: 320px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 5px 2px 8px -1px #888;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.cPost .head {
+    padding: 10px;
+    display: flex;
+}
+
+.cPost .cBody {
+    width: 100%;
+}
+
+.cBody img {
+    max-width: 100%;
+    height: 200px;
+}
+
+.nBtn {
+    margin-left: 10px;
+    position: fixed;
+}
+
+.showBody {
+    margin: 100px auto;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.circleAvatar {
+    /* display: inline; */
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: red;
+    margin: 0 auto;
+}
+
+.cMargin {
+    margin: 0 auto;
+}
+
+.showBody img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: red;
+    margin: 0 auto;
+}

@@ -1,2 +1,13 @@
-<h1><%= @user.name %>のページ</h1>
-<p>メールアドレス: <%= @user.email %></p>
+
+<div class="showBody">
+    <div class="circleAvatar center">
+        <% if @user.image.url %>
+            <%= image_tag(@user.image.url)%>
+        <% end %>
+    </div>
+    <h1 class="center"> Name: <%= @user.name %></h1>
+    <p class="center"> Email: <%= @user.email %></p>
+    <div class="cBtn cVert center cMargin">
+        <%= link_to "Modifier votre profile", edit_user_path(@user.id) %>
+    </div>
+</div>

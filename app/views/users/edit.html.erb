@@ -1,0 +1,32 @@
+
+<h1> Modifier votre profil</h1>
+
+<div class="showBody">
+<% if @user.errors.any? %> 
+        <div id="error_explanation"> 
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this <%= @user.name %> from being saved:</h2> 
+        <ul> 
+            <% @user.errors.full_messages.each do |message| %> 
+            <li><%= message %></li> 
+        <% end %> 
+        </ul> 
+ </div> 
+ <% end %> 
+<div class="newForm">
+    <%= form_with(model: @user, local: true) do |f| %>
+    <div class="center">
+        <%= f.file_field :image %>
+        <%= f.hidden_field :image_cache %>
+    </div>
+    <%= f.label :name , class:"labelForm leftSpace" %> 
+    <%= f.text_field :name, class:"inputForm" %> 
+    <%= f.label :email , class:"labelForm leftSpace"%> 
+    <%= f.email_field :email, class:"inputForm" %> 
+    <%= f.label :password, class:"labelForm leftSpace" %> 
+    <%= f.password_field :password, class:"inputForm" %> 
+    <%= f.label :password_confirmation, class:"labelForm leftSpace" %> 
+    <%= f.password_field :password_confirmation, class:"inputForm" %> 
+    <%= f.submit "Inscription",  class:"bSubmit"  %> 
+    <% end %>
+</div>
+</div>

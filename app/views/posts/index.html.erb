@@ -1,0 +1,31 @@
+
+<h1>Accueil</h1>
+
+<div class="cBtn cVert nBtn">
+    <%= link_to "Partagez une nouvelle photo", new_post_path %>
+</div>
+
+<% @posts.each do |post| %>
+    <div class="cPost">
+        <div class="head">
+            <div class="cBtn cVert">
+                <%= link_to "Modifier", edit_post_path(post.id) %>
+            </div>
+            <div class="cBtn cVert">
+                <%= link_to "Supprimer", post_path(post.id), method: :delete %>
+            </div>
+            <div class="cBtn cVert">
+                <%= link_to "Details", post_path(post.id)%>
+            </div>
+        </div>
+        <div class="cBody">
+            <% if post.image && post.image.url %>
+                <%= image_tag(post.image.url)%>
+            <% end %>
+        </div>
+        <div>
+            <p>Poster par <%= getNameUser(post.user_id) %> </p>
+        </div>
+    </div>
+<% end %>
+

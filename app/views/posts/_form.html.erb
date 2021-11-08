@@ -1,0 +1,21 @@
+<%= form_with(model: post, local: true, url: choose_new_or_edit) do |form| %>
+    <% if post.errors.any? %>
+        <div class="error">
+            <h2> il y a <%= post.errors.count %> erreurs.</h2>
+            <ul>
+                <% post.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <div class="field">
+        <%= form.label "Choisissez l'image :", class: "labelForm" %>
+        <%= image_tag(@post.image.url) if @post.image && @post.image.url %>
+        <%= form.file_field :image %>
+        <%= form.hidden_field :image_cache %>
+        <div class="sbmt">
+            <%= form.submit "Créer un poste", class: "bSubmit" %>
+        </div>
+    </div>
+<% end %>
