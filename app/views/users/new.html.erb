@@ -1,2 +1,16 @@
 
-<h1> NEW USERS </h1>
+<h1> S'inscrire</h1>
+
+<div class="newForm">
+    <%= form_with(model: @user, local: true) do |f| %> 
+    <%= f.label :name , class:"labelForm leftSpace" %> 
+    <%= f.text_field :name, class:"inputForm" %> 
+    <%= f.label :email , class:"labelForm leftSpace"%> 
+    <%= f.email_field :email, class:"inputForm" %> 
+    <%= f.label :password, class:"labelForm leftSpace" %> 
+    <%= f.password_field :password, class:"inputForm" %> 
+    <%= f.label :password_confirmation, class:"labelForm leftSpace" %> 
+    <%= f.password_field :password_confirmation, class:"inputForm" %> 
+    <%= f.submit "Inscription",  class:"bSubmit"  %> 
+    <% end %>
+</div>

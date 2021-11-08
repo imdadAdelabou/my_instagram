@@ -179,3 +179,14 @@ h5 {
     font-weight: bold;
     margin: 0;
 }
+
+.newForm {
+    width: 348px;
+    background-color: white;
+    box-shadow: 5px 2px 8px -1px #888;
+    margin: 0 auto;
+}
+
+.leftSpace {
+    margin-left: 40px;
+}
