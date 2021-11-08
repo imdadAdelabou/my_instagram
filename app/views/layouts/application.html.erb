@@ -17,21 +17,24 @@
         <div class="right_elm">
           <% if logged_in? %>
             <div class="cBtn cVert">
-              <%= link_to "Profile" %>
+              <%= link_to "Profile", user_path(current_user.id) %>
             </div>
             <div class="cBtn cVert">
-              <%= link_to "Logout" %>
+              <%= link_to "Logout", session_path(current_user.id), method: :delete %>
             </div>
           <% else %>
              <div class="cBtn">
-              <%= link_to "Connexion" %>
+              <%= link_to "Connexion", new_session_path %>
             </div>
             <div class="cBtn">
-              <%= link_to "Inscription" %>
+              <%= link_to "Inscription", new_user_path %>
             </div>
           <% end %>
         </div>
     </header>
+    <% flash.each do |key, value| %> 
+    <%= content_tag(:div, value, class: "#{key}") %> 
+    <% end %> 
     <%= yield %>
   </body>
 </html>
