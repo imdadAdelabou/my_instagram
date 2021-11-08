@@ -81,8 +81,8 @@ header .right_elm {
 .cForm {
     width: 350px;
     border-radius: 10px;
-    box-shadow: 5px 2px 8px -1px #888;
     margin: 90px auto;
+    box-shadow: 5px 2px 8px -1px #888;
 }
 
 .center {
@@ -151,4 +151,31 @@ h5 {
 #login>p {
     color: #00376B;
     margin: 0 100px 0 100px;
+    cursor: pointer;
+}
+
+.new p {
+    margin-right: 5px;
+    font-family: 'Poppins';
+    font-size: 13px;
+}
+
+.new {
+    display: flex;
+    margin-top: 10px;
+    width: 350px;
+    height: 63px;
+    background-color: white;
+    box-shadow: 5px 2px 8px -1px #888;
+    border-radius: 10px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.new a {
+    color: #0095F6;
+    font-family: 'Poppins';
+    font-weight: bold;
+    margin: 0;
 }
